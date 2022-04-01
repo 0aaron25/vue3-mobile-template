@@ -25,7 +25,7 @@ export function isEmpty(value: any): boolean {
  * @params:value
  * @returns:boolean
  */
-export function isObject(value: any): boolean {
+export function isObject(value: any): value is Object {
   return (
     Object.prototype.toString.call(value) == "[object Object]" &&
     typeof value == "object"
@@ -37,7 +37,7 @@ export function isObject(value: any): boolean {
  * @params:value
  * @returns:boolean
  */
-export function isArray(value: any): boolean {
+export function isArray<T = any>(value: any): value is Array<T> {
   return Object.prototype.toString.call(value) == "[object Array]"
 }
 
@@ -46,7 +46,7 @@ export function isArray(value: any): boolean {
  * @params:value
  * @returns:boolean
  */
-export function isString(value: any): boolean {
+export function isString(value: any): value is String {
   return typeof value == "string"
 }
 
@@ -55,7 +55,7 @@ export function isString(value: any): boolean {
  * @params:value
  * @returns:boolean
  */
-export function isMap(value: any): boolean {
+export function isMap<T = any, O = any>(value: any): value is Map<T, O> {
   return Object.prototype.toString.call(value) == "[object Map]"
 }
 
@@ -64,8 +64,6 @@ export function isMap(value: any): boolean {
  * @params:value
  * @returns:boolean
  */
-export function isSet(value: any): boolean {
+export function isSet<T = any>(value: any): value is Set<T> {
   return Object.prototype.toString.call(value) == "[object Set]"
 }
-
-console.log(isEmpty(12))

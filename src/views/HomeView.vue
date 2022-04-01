@@ -1,9 +1,7 @@
-<script setup lang="ts">
-import Table from "./table.vue"
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <main>
-    <Table></Table>
+    <div>123</div>
   </main>
 </template>
