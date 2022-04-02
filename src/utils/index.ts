@@ -1,11 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /*
  * @description:判断传入的值是否为空值
  * @params:value
  * @returns:boolean
  */
-export function isEmpty(value: String): boolean
+export function isEmpty(value: string): boolean
 export function isEmpty<T = any>(value: Array<T>): boolean
-export function isEmpty(value: Object): boolean
+export function isEmpty(value: object): boolean
 export function isEmpty<I = any, O = any>(value: Map<I, O>): boolean
 export function isEmpty<T = any>(value: Set<T>): boolean
 export function isEmpty(value: any): boolean {
@@ -25,7 +26,7 @@ export function isEmpty(value: any): boolean {
  * @params:value
  * @returns:boolean
  */
-export function isObject(value: any): value is Object {
+export function isObject(value: any): value is object {
   return (
     Object.prototype.toString.call(value) == "[object Object]" &&
     typeof value == "object"
@@ -46,7 +47,7 @@ export function isArray<T = any>(value: any): value is Array<T> {
  * @params:value
  * @returns:boolean
  */
-export function isString(value: any): value is String {
+export function isString(value: any): value is string {
   return typeof value == "string"
 }
 

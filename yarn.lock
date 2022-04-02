@@ -4373,6 +4373,13 @@
   dependencies:
     "debug" "^4.3.3"
 
+"vite-plugin-restart@^0.1.1":
+  "integrity" "sha512-kBxOqRrdbjVmC0PiT2KNXZogpgqA2epMkny//VjWnOS2k9NV/vXA7PYgf8/1lmBCZsC+iMj1C1ODuAR/9Sig4A=="
+  "resolved" "https://registry.npmjs.org/vite-plugin-restart/-/vite-plugin-restart-0.1.1.tgz"
+  "version" "0.1.1"
+  dependencies:
+    "micromatch" "^4.0.4"
+
 "vite-plugin-style-import@^1.4.1":
   "integrity" "sha512-lJCRvm7+So0hHdnSJiJPg9gD5mxtL6YY0jmhEph+k7ArpsyvqOh6han2kG5htbWWDZxHkUN9d1BuTFL//yCLLQ=="
   "resolved" "https://registry.npmjs.org/vite-plugin-style-import/-/vite-plugin-style-import-1.4.1.tgz"

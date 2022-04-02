@@ -1,7 +1,5 @@
-<script setup lang="ts"></script>
-
 <template>
-  <main>
-    <div>123</div>
-  </main>
+  <main>111</main>
 </template>
+
+<script setup lang="ts"></script>

@@ -1,6 +1,12 @@
 {
   "extends": "@vue/tsconfig/tsconfig.json",
-  "include": ["vite.config.*", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue"],
+  "include": [
+    "vite.config.*",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.vue",
+    "config/**/*"
+  ],
   "compilerOptions": {
     "composite": true,
     "baseUrl": ".",
