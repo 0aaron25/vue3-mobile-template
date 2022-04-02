@@ -8,8 +8,11 @@ import OptimizationPersist from "vite-plugin-optimize-persist"
 import PkgConfig from "vite-plugin-package-config"
 import type { ConfigEnv, Plugin } from "vite"
 import ViteRestart from "vite-plugin-restart"
+import { viteMockServe } from "vite-plugin-mock"
 
 export default (env: ConfigEnv) => {
+  const isBuild = env.command === "build"
+  const prodMock = true
   const vitePlugins: (Plugin | Plugin[])[] = [
     vue(),
     AutoImport({
@@ -43,6 +46,21 @@ export default (env: ConfigEnv) => {
       // 配置监听的文件
       restart: ["**/config/*.[jt]s"],
     }),
+    viteMockServe({
+      //忽略以_开头的文件
+      ignore: /^\_/,
+      //从mock文件夹读取mock数据
+      mockPath: "mock",
+      //设置是否启用本地 xxx.ts 文件，不要在生产环境中打开它.设置为 false 将禁用 mock 功能
+      localEnabled: !isBuild,
+      // 设置打包是否启用 mock 功能
+      prodEnabled: isBuild && prodMock,
+      injectCode: `
+            import { setupProdMockServer } from '../mock/_createProductionServer';
+            setupProdMockServer();
+        `,
+    }),
   ]
+
   return vitePlugins
 }

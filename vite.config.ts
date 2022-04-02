@@ -17,6 +17,7 @@ export default defineConfig((env: ConfigEnv) => {
           new URL("./src/components", import.meta.url),
         ),
         "@plugins": fileURLToPath(new URL("./src/plugins", import.meta.url)),
+        "@api": fileURLToPath(new URL("./src/api", import.meta.url)),
       },
     },
     css: {

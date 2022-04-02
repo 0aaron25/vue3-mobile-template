@@ -68,3 +68,12 @@ export function isMap<T = any, O = any>(value: any): value is Map<T, O> {
 export function isSet<T = any>(value: any): value is Set<T> {
   return Object.prototype.toString.call(value) == "[object Set]"
 }
+
+/*
+ * @description:判断是否请求成功
+ * @params:value
+ * @returns:boolean
+ */
+export function isRequessSuccess(value: number): boolean {
+  return value >= 200 && value <= 400
+}

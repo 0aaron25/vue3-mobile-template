@@ -3,9 +3,11 @@
   "include": [
     "vite.config.*",
     "src/**/*.ts",
+    "src/**/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.vue",
-    "config/**/*"
+    "config/**/*",
+    "mock/**/*"
   ],
   "compilerOptions": {
     "composite": true,
@@ -17,8 +19,10 @@
       "@stores/*": ["src/stores/*"],
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
-      "@plugins/*": ["src/plugins/*"]
+      "@plugins/*": ["src/plugins/*"],
+      "@api/*": ["src/api/*"]
     },
-    "types": ["vite-plugin-svg-icons/client", "node", "vitest"]
+    "types": ["vite-plugin-svg-icons/client", "node", "vitest", "vite/client"],
+    "declaration": true
   }
 }
