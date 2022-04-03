@@ -20,7 +20,8 @@
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@plugins/*": ["src/plugins/*"],
-      "@api/*": ["src/api/*"]
+      "@api/*": ["src/api/*"],
+      "@config/*": ["config/*"]
     },
     "types": ["vite-plugin-svg-icons/client", "node", "vitest", "vite/client"],
     "declaration": true

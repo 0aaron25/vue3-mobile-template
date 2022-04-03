@@ -3,6 +3,7 @@ type vantCompoents = {
   [key: string]: any
 }
 import {
+  Icon,
   List,
   Toast,
   Search,
@@ -32,9 +33,12 @@ import {
   DatetimePicker,
   Loading,
   Overlay,
+  ConfigProvider,
 } from "vant"
 
 const components: vantCompoents = {
+  Icon,
+  ConfigProvider,
   List,
   Toast,
   Search,

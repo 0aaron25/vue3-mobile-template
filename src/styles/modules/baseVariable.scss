@@ -2,3 +2,93 @@
 * @description:svg默认大小
 */
 $var-svg-icon-default-size: 20px;
+
+/*
+* @description:输入框配置
+*/
+
+$var-theme-color: #80d3c5;
+
+/* 颜色变量 */
+
+/* 行为相关颜色 */
+$var-color-primary: #007aff;
+$var-color-success: #4cd964;
+$var-color-warning: #f0ad4e;
+$var-color-error: #dd524d;
+
+/* 文字基本颜色 */
+$var-text-color-title: #000; //标题色
+$var-text-color: #333; //基本色
+$var-text-color-inverse: #fff; //反色
+$var-text-color-grey: #999; //辅助灰色，如加载更多的提示信息
+$var-text-color-placeholder: #808080;
+$var-text-color-disable: #c0c0c0;
+$var-text-color-hot: #f94d2a; // 热点颜色
+$var-text-color-more: #5d83a8; // 更多颜色
+
+/* 背景颜色 */
+$var-bg-color: #ffffff;
+$var-bg-color-grey: #f8f8f8;
+$var-bg-color-hover: #f1f1f1; //点击状态颜色
+$var-bg-color-mask: rgba(0, 0, 0, 0.4); //遮罩颜色
+
+/* 边框颜色 */
+$var-border-color: #e5e5e5;
+
+/* 尺寸变量 */
+
+/* 文字尺寸 */
+$var-font-size-sm: 12px;
+$var-font-size-base: 14px;
+$var-font-size-lg: 16px;
+
+/* 图片尺寸 */
+$var-img-size-sm: 20px;
+$var-img-size-base: 26px;
+$var-img-size-lg: 40px;
+
+/* Border Radius */
+$var-border-radius-sm: 2px;
+$var-border-radius-base: 3px;
+$var-border-radius-lg: 6px;
+$var-border-radius-circle: 50%;
+
+/* 水平间距 */
+$var-spacing-row-sm: 5px;
+$var-spacing-row-base: 10px;
+$var-spacing-row-lg: 15px;
+
+/* 垂直间距 */
+$var-spacing-col-sm: 4px;
+$var-spacing-col-base: 8px;
+$var-spacing-col-lg: 12px;
+$var-spacing-col-big: 24px;
+
+/* 透明度 */
+$var-opacity-disabled: 0.3; // 组件禁用态的透明度
+
+/* 文章场景相关 */
+$var-color-title: #2c405a; // 文章标题颜色
+$var-font-size-title: 20px;
+$var-color-subtitle: #555555; // 二级标题颜色
+$var-font-size-subtitle: 26px;
+$var-color-paragraph: #3f536e; // 文章段落颜色
+$var-font-size-paragraph: 15px;
+
+// 阴影
+$var-shadow-sm: 0 0 5px
+  rgba(
+    $color: #d8d8d8,
+    $alpha: 0.5,
+  );
+$var-shadow-base: 0 1px 8px 1px
+  rgba(
+    $color: #a5a5a5,
+    $alpha: 0.2,
+  );
+$var-shadow-lg: 0px 1px 10px 2px
+  rgba(
+    $color: #a5a4a4,
+    $alpha: 0.5,
+  );

@@ -18,6 +18,7 @@ export default defineConfig((env: ConfigEnv) => {
         ),
         "@plugins": fileURLToPath(new URL("./src/plugins", import.meta.url)),
         "@api": fileURLToPath(new URL("./src/api", import.meta.url)),
+        "@config": fileURLToPath(new URL("./config", import.meta.url)),
       },
     },
     css: {
@@ -25,6 +26,7 @@ export default defineConfig((env: ConfigEnv) => {
         //scss全局变量导入
         scss: {
           additionalData: `@import "@styles/variable.scss";`,
+          charset: false,
         },
       },
     },

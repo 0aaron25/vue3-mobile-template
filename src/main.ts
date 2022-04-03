@@ -6,6 +6,9 @@ import router from "@/router"
 //导入vant组件
 import vantCompoents from "@plugins/vant/vant"
 
+//解决vant tab组件加swiable属性警告
+import "default-passive-events"
+
 //导入全局样式
 import "@styles/global.scss"
 
@@ -21,4 +24,4 @@ app.config.errorHandler = (err, vm, info) => {
   console.log(err, vm, info)
 }
 
-app.use(vantCompoents).use(createPinia()).use(router).mount("#app")
+app.use(createPinia()).use(vantCompoents).use(router).mount("#app")

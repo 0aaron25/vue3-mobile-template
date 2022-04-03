@@ -9,12 +9,19 @@ import PkgConfig from "vite-plugin-package-config"
 import type { ConfigEnv, Plugin } from "vite"
 import ViteRestart from "vite-plugin-restart"
 import { viteMockServe } from "vite-plugin-mock"
+import { visualizer } from "rollup-plugin-visualizer"
 
 export default (env: ConfigEnv) => {
   const isBuild = env.command === "build"
   const prodMock = true
   const vitePlugins: (Plugin | Plugin[])[] = [
     vue(),
+    visualizer({
+      filename: "./node_modules/.cache/visualizer/stats.html",
+      open: true,
+      gzipSize: true,
+      brotliSize: true,
+    }),
     AutoImport({
       imports: ["vue", "vue-router", "pinia"],
       dts: "./src/types/auto-imports.d.ts",
@@ -55,10 +62,6 @@ export default (env: ConfigEnv) => {
       localEnabled: !isBuild,
       // 设置打包是否启用 mock 功能
       prodEnabled: isBuild && prodMock,
-      injectCode: `
-            import { setupProdMockServer } from '../mock/_createProductionServer';
-            setupProdMockServer();
-        `,
     }),
   ]
 

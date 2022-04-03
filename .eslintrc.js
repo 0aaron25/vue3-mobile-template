@@ -15,6 +15,7 @@ module.exports = {
     //检查有无使用变量
     "vue/no-unused-vars": "error",
     "vue/comment-directive": "off",
+    "vue/multi-word-component-names": "off",
   },
   parser: "vue-eslint-parser",
   parserOptions: {

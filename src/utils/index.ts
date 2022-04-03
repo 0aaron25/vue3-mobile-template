@@ -70,6 +70,24 @@ export function isSet<T = any>(value: any): value is Set<T> {
 }
 
 /*
+ * @description:判断传入的值是不是null
+ * @params:value
+ * @returns:boolean
+ */
+export function isNull(value: any): value is null {
+  return Object.prototype.toString.call(value) == "[object Null]"
+}
+
+/*
+ * @description:判断传入的值是不是undefined
+ * @params:value
+ * @returns:boolean
+ */
+export function isUndefind(value: any): value is undefined {
+  return Object.prototype.toString.call(value) == "[object Undefined]"
+}
+
+/*
  * @description:判断是否请求成功
  * @params:value
  * @returns:boolean
